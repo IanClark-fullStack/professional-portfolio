@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from '../src/components/Header';
+import Prenav from './components/Prenav';
 
 function App() {
   return (
     <div className="App">
+      <Prenav />
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
