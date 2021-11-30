@@ -13,7 +13,7 @@ module.exports = {
       }, 
       backgroundImage: {
         'browserPattern': "url('/src/components/Projects/assets/browserBrush.png')",
-        // 'muskyTweets-pattern': "url('/public/newNewsStock.jpg')",
+        'muskyTweets-pattern': "url('/src/components/Projects/assets/newNewsStock.jpg')",
         // 'password-Pattern': "url('/public/passWordGenerator.jpg')",
         // 'todo-pattern': "url('/public/localStorageTodoList.jpg')",
       }

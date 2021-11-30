@@ -1,6 +1,5 @@
-import stockAppImage from './assets/newNewsStock.jpg';
+// import stockAppImage from './assets/newNewsStock.jpg';
 import FeaturedProject1 from './Featured/FeaturedProject1';
-
 export default function ProjectsBrowserContainerWindow() {
     const projects = {
         project1: {
@@ -8,21 +7,18 @@ export default function ProjectsBrowserContainerWindow() {
             name: 'Project1 Name', 
             repo: 'https://github.com/IanClark-fullStack/muskytweets',
             deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
-            screenshot: `${stockAppImage}`,
         },
         project2: {
             id: 2,
             name: 'Project2 Name', 
             repo: 'https://github.com/IanClark-fullStack/muskytweets',
             deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
-            screenshot: `${stockAppImage}`,
         },
         project3: {
             id: 3,
             name: 'Project3 Name', 
             repo: 'https://github.com/IanClark-fullStack/muskytweets',
             deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
-            screenshot: `${stockAppImage}`,
         },
     };
 
