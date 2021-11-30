@@ -1,5 +1,6 @@
-// import stockAppImage from './assets/newNewsStock.jpg';
+import stockAppImage from './assets/newNewsStock.jpg';
 import FeaturedProject1 from './Featured/FeaturedProject1';
+import FeaturedProject2 from './Featured/FeaturedProject2';
 export default function ProjectsBrowserContainerWindow() {
     const projects = {
         project1: {
@@ -26,12 +27,11 @@ export default function ProjectsBrowserContainerWindow() {
     return (
         <>
             <div className='flex justify-center items-center py-3'>
-                
+                <FeaturedProject1 projectsProp={projects} />
             </div>
 
             <div className='flex justify-center items-center mx-auto py-3'>
-                <FeaturedProject1 projectsProp={projects} />
-                {/* <FeaturedProject2 /> */}
+                <FeaturedProject2 projectsProp={projects} />
                 {/* <FeaturedProject3 /> */}
             </div>
         </>
