@@ -1,5 +1,5 @@
-import VoidShape from './VoidShape';
-import ArrowShape from './ArrowShape';
+import VoidShape from './assets/VoidShape';
+import ArrowShape from './assets/ArrowShape';
 import HeaderItems from './HeaderItems';
 const headerInfoList = ['Full Stack Developer', 'Bootcamper', 'Shirt Tucker', <VoidShape />, <ArrowShape />];
 

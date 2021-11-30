@@ -11,12 +11,12 @@ module.exports = {
         blue: '#291beb',
         bright: '#f36ef5'
       }, 
-      // backgroundImage: {
-      //   'browserPattern': "url('/public/browserBrush.png')",
-      //   'muskyTweets-pattern': "url('/public/newNewsStock.jpg')",
-      //   'password-Pattern': "url('/public/passWordGenerator.jpg')",
-      //   'todo-pattern': "url('/public/localStorageTodoList.jpg')",
-      // }
+      backgroundImage: {
+        'browserPattern': "url('/src/components/Projects/assets/browserBrush.png')",
+        // 'muskyTweets-pattern': "url('/public/newNewsStock.jpg')",
+        // 'password-Pattern': "url('/public/passWordGenerator.jpg')",
+        // 'todo-pattern': "url('/public/localStorageTodoList.jpg')",
+      }
     },
   },
   variants: {

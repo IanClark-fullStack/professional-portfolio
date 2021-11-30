@@ -1,0 +1,43 @@
+import stockAppImage from './assets/newNewsStock.jpg';
+import FeaturedProject1 from './Featured/FeaturedProject1';
+
+export default function ProjectsBrowserContainerWindow() {
+    const projects = {
+        project1: {
+            id: 1,
+            name: 'Project1 Name', 
+            repo: 'https://github.com/IanClark-fullStack/muskytweets',
+            deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
+            screenshot: `${stockAppImage}`,
+        },
+        project2: {
+            id: 2,
+            name: 'Project2 Name', 
+            repo: 'https://github.com/IanClark-fullStack/muskytweets',
+            deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
+            screenshot: `${stockAppImage}`,
+        },
+        project3: {
+            id: 3,
+            name: 'Project3 Name', 
+            repo: 'https://github.com/IanClark-fullStack/muskytweets',
+            deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
+            screenshot: `${stockAppImage}`,
+        },
+    };
+
+
+    return (
+        <>
+            <div className='flex justify-center items-center py-3'>
+                
+            </div>
+
+            <div className='flex justify-center items-center mx-auto py-3'>
+                <FeaturedProject1 projectsProp={projects} />
+                {/* <FeaturedProject2 /> */}
+                {/* <FeaturedProject3 /> */}
+            </div>
+        </>
+    )
+};
