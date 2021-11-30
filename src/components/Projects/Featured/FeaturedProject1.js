@@ -6,9 +6,9 @@ export default function FeaturedProject1({ projectsProp }) {
     // Haha just ask your tutor! 
     const [projectHover, setProjectHover] = useState(false);
 
-    const imageBackground = 'mx-auto h-28 md:h-44 bg-cover bg-center bg-muskyTweets-pattern bg-no-repeat border-2 border-blue transform -translate-x-2 -translate-y-3';
+    const imageBackground = 'mx-auto h-28 md:h-44 bg-cover bg-center bg-muskyTweets-pattern bg-no-repeat border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3';
 
-    const replaceImageBackground = 'mx-auto h-28 md:h-44 bg-blue border-2 border-blue transform -translate-x-2 -translate-y-3';
+    const replaceImageBackground = 'mx-auto h-28 md:h-44 bg-blue border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3';
 
     return (
         <div
@@ -19,7 +19,7 @@ export default function FeaturedProject1({ projectsProp }) {
                 <article className={projectHover ? replaceImageBackground : imageBackground}>
                     
                     {projectHover ?(
-                        <div id='info1' className='itemsCenter'>
+                        <div id='info1' className='itemsCenter font-display mt-4'>
                             <h4 id="project-title" className="text-bright text-md text-center">    
                                 {projectsProp.project1.name}
                             </h4>
