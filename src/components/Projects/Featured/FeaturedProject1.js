@@ -14,28 +14,22 @@ export default function FeaturedProject1({ projectsProp }) {
         <div
             onMouseEnter={() => setProjectHover(true)} 
             onMouseLeave={() => setProjectHover(false)}
-            className={projectHover ? 'w-3/5 bg-bright border-2 border-blue ml-5' 
-            : 'w-3/5 border-2 border-bright ml-5'}>
+            className={projectHover ? 'w-3/5 md:w-1/2 bg-bright border-2 border-blue ml-5' 
+            : 'w-3/5 md:w-1/2 border-2 border-bright ml-5'}>
                 <article className={projectHover ? replaceImageBackground : imageBackground}>
                     
                     {projectHover ?(
                         <div id='info1' className='itemsCenter font-display mt-4'>
-                            <h4 id="project-title" className="text-bright text-md text-center">    
+                            <h4 id='project-title' className='text-white text-md md:text-3xl text-center'>    
                                 {projectsProp.project1.name}
                             </h4>
 
-                            <ul id="project-links" className='text-white text-center'>
-                                <li><a href={projectsProp.project1.deployed} className='hover:pb-1 hover:underline'>Live Page</a></li>
-                                <li><a href={projectsProp.project1.repo} className='hover:pb-1 hover:underline'>Visit the Repo</a></li>
+                            <ul id='project-links' className='text-white text-center'>
+                                <li><a href={projectsProp.project1.deployed} className='hover:pb-1 hover:underline hover:text-bright'>Live Page</a></li>
+                                <li><a href={projectsProp.project1.repo} className='hover:pb-1 hover:underline hover:text-bright'>Visit the Repo</a></li>
                             </ul>
                         </div>)
-                    : (
-                        <div>
-                            
-
-
-                        </div>
-                        )
+                    : <></>
                     }
 
                 </article>

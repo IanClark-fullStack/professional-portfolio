@@ -5,7 +5,7 @@ export default function FeaturedProject2({ projectsProp }) {
     // Haha just ask your tutor! 
     const [projectHover, setProjectHover] = useState(false);
 
-    const imageBackground = 'mx-auto h-28 md:h-56 bg-blue border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3';
+    const imageBackground = 'mx-auto h-28 md:h-56 bg-cover bg-center bg-muskyTweets-pattern bg-no-repeat border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3';
     
     const replaceImageBackground = 'mx-auto h-28 md:h-56 bg-blue border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3';
 
@@ -19,13 +19,13 @@ export default function FeaturedProject2({ projectsProp }) {
                     
                     {projectHover ?(
                         <div id='info1' className='itemsCenter mt-4 font-display'>
-                            <h4 id="project-title" className="text-bright text-md text-center">    
+                            <h4 id="project-title" className="text-white text-md md:text-3xl text-center">    
                                 {projectsProp.project2.name}
                             </h4>
 
-                            <ul id="project-links" className='text-white text-center'>
-                                <li><a href={projectsProp.project2.deployed} className='hover:pb-1 hover:underline'>Live Page</a></li>
-                                <li><a href={projectsProp.project2.repo} className='hover:pb-1 hover:underline'>Visit the Repo</a></li>
+                            <ul id="project-links" className='text-white text-center text-sm md:text-xl md:mt-6 hover:pb-1 hover:underline'>
+                                <li><a href={projectsProp.project2.deployed} className='hover:pb-1 hover:underline hover:text-bright'>Live Page</a></li>
+                                <li><a href={projectsProp.project2.repo} className='hover:pb-1 hover:underline hover:text-bright'>Visit the Repo</a></li>
                             </ul>
                         </div>)
                     : (
