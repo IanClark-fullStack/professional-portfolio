@@ -14,6 +14,7 @@ module.exports = {
       backgroundImage: {
         'browserPattern': "url('/src/components/Projects/assets/browserBrush.png')",
         'muskyTweets-pattern': "url('/src/components/Projects/assets/newNewsStock.jpg')",
+        'profile-MacOS': "url('/src/components/About/assets/about-mac-os9ui.jpg')",
         // 'password-Pattern': "url('/public/passWordGenerator.jpg')",
         // 'todo-pattern': "url('/public/localStorageTodoList.jpg')",
       }

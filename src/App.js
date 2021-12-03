@@ -6,10 +6,7 @@ import Main from './components/Main';
 function App() {
   return (
     <div className="App">
-      <Prenav />
-      <Header />
       <Main /> 
-      {/* <Footer />  */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
