@@ -6,13 +6,14 @@ import { validateEmail } from './helpers/auth';
 export default function ConctactMeForm() {
     const [hasFocus, setFocus] = useState(false);
     const [hasFocus2, setFocus2] = useState(false);
+    const [hasFocus3, setFocus3] = useState(false);
     const [hasHover, setHover] = useState(false);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [toSend, setToSend] = useState({
-        user_email: '',
-        user_name: '',
+        contact_email: '',
+        contact_name: '',
         message: '',
     });
 
@@ -42,7 +43,7 @@ export default function ConctactMeForm() {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
-        if (inputType === 'user_email') {
+        if (inputType === 'contact_email') {
             // Change state of email 
             setEmail(inputValue);
         } else {
@@ -63,7 +64,7 @@ export default function ConctactMeForm() {
         // In every other case, send the email. 
         send(
             'service_d0rdrpw',
-            'template_nvhlb7n',
+            'template_la8ze19',
             toSend, 
             'user_f68WX13eeMq2KKSwJdgPj'
         ) .then((res) => {
@@ -76,17 +77,17 @@ export default function ConctactMeForm() {
     return (
         <>
         <form id='myForm' className='w-full' onSubmit={handleFormSubmit}> 
-            <h5>Grab a copy of my resume below</h5>
+            <h5>Drop me a line</h5>
             <div className='w-2/3' style={hasFocus ? styles.boxFocus : styles.box}> 
                 <input 
                     onFocus={() => setFocus(true)}
                     onBlur={() => setFocus(false)}
                     className='focus:outline-none pl-2'
                     type='text' 
-                    name='user_email'
+                    name='contact_email'
                     placeholder='Your email'
-                    id='user_email'
-                    value={toSend.user_email}
+                    id='contact_email'
+                    value={toSend.contact_email}
                     onChange={handleInputChange}
                 />
             </div>
@@ -96,10 +97,22 @@ export default function ConctactMeForm() {
                     onBlur={() => setFocus2(false)}
                     className='focus:outline-none pl-2'
                     type='text' 
-                    name='user_name'
+                    name='contact_name'
                     placeholder='Your name'
-                    id='user_name' 
-                    value={toSend.user_name}
+                    id='contact_name' 
+                    value={toSend.contact_name}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <div style={hasFocus3 ? styles.boxFocus : styles.box}>
+                <textarea 
+                    onFocus={() => setFocus3(true)}
+                    onBlur={() => setFocus3(false)}
+                    className='focus:outline-none pl-2'
+                    type='text' 
+                    name='message'
+                    id='message' 
+                    value={toSend.message}
                     onChange={handleInputChange}
                 />
             </div>
