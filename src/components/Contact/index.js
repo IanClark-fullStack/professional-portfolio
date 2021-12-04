@@ -25,7 +25,7 @@ export default function Projects() {
         
 
     return (
-        <section id='Contact' className='container py-10 pb-10 pr-2 mx-auto'>
+        <section className='container py-10 pb-10 pr-2 mx-auto'>
             <h2 className='font-display text-left text-6xl md:text-8xl md:mx-auto ml-8 pb-2 md:pb-4'>Contact</h2>
             
                 <ul className='font-display text-left leading-3 pb-4 md:text-xl md:text-center md:leading-9'>
