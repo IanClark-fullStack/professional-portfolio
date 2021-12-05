@@ -4,7 +4,7 @@ export default function Nav({ pageSelect, changeView }) {
 
     return (
         <nav className='font-display flex flex-row justify-between items-center py-3 md:text-3xl'>
-            <a href='home'>
+            <a onClick={() => changeView('home')}>
                 <h4 className='justify-start text-3xl ml-2 md:text-6xl'>iC</h4>
             </a>
                 {/* <NavLinks navLinksProp={navLinks} /> */}
