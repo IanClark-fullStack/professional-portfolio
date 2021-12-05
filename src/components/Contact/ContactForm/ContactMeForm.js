@@ -16,13 +16,9 @@ export default function ConctactMeForm() {
         contact_name: '',
         message: '',
     });
-
-    const boxOff = 'h-28 md:h-44 bg-bright border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3 hover:bg-blue hover:border-bright';
     
     const styles = {
-        box: {
-            // boxShadow: '4px 4px 0 rgba(243, 110, 240)', 
-        
+        box: {        
             border: '2px solid rgba(243, 110, 240)', 
             height: '40px',
             margin: '16px 38px',
@@ -76,9 +72,9 @@ export default function ConctactMeForm() {
 
     return (
         <>
-        <form id='myForm' className='w-full' onSubmit={handleFormSubmit}> 
+        <form id='myForm' className='w-8/12' onSubmit={handleFormSubmit}> 
             <h5>Drop me a line</h5>
-            <div className='w-2/3' style={hasFocus ? styles.boxFocus : styles.box}> 
+            <div className='w-1/3' style={hasFocus ? styles.boxFocus : styles.box}> 
                 <input 
                     onFocus={() => setFocus(true)}
                     onBlur={() => setFocus(false)}
@@ -104,7 +100,7 @@ export default function ConctactMeForm() {
                     onChange={handleInputChange}
                 />
             </div>
-            <div style={hasFocus3 ? styles.boxFocus : styles.box}>
+            <div className='w-2/3' style={hasFocus3 ? styles.boxFocus : styles.box}>
                 <textarea 
                     onFocus={() => setFocus3(true)}
                     onBlur={() => setFocus3(false)}
@@ -112,6 +108,7 @@ export default function ConctactMeForm() {
                     type='text' 
                     name='message'
                     id='message' 
+                    placeholder='message'
                     value={toSend.message}
                     onChange={handleInputChange}
                 />

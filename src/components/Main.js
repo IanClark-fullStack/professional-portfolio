@@ -3,6 +3,7 @@ import About from './About';
 import Header from './Header';
 import Projects from './Projects';
 import Contact from './Contact';
+import Resume from './Resume';
 import Footer from './Footer';
 import { useState } from 'react';
 
@@ -25,8 +26,7 @@ export default function() {
                 {pageSelect === 'about' && <About />}
                 {pageSelect === 'projects' && <Projects />}
                 {pageSelect === 'contact' && <Contact />}
-            
-            {/* {pageSelect === 'Resume' && <Resume />} */}
+                {pageSelect === 'resume' && <Resume />}
             
             <Footer /> 
         </main>

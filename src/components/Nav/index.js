@@ -1,9 +1,9 @@
-const navLinks = ['projects', 'about', 'contact'];
+const navLinks = ['projects', 'about', 'contact', 'resume'];
 
 export default function Nav({ pageSelect, changeView }) {
 
     return (
-        <nav className='flex flex-row justify-between items-center py-3 md:text-3xl'>
+        <nav className='font-display flex flex-row justify-between items-center py-3 md:text-3xl'>
             <a href='home'>
                 <h4 className='justify-start text-3xl ml-2 md:text-6xl'>iC</h4>
             </a>
@@ -12,9 +12,9 @@ export default function Nav({ pageSelect, changeView }) {
                 { navLinks.map((link) => 
                 <li key={link} className='mx-1 md:mx-8'>
                     <a 
-                        href={`#${link}`} 
+                        // href={`#${link}`} 
                         onClick={() => changeView(`${link}`)}
-                        className={pageSelect === {link} ? 'border-b-2 border-bright' : 'border-none' }
+                        className={pageSelect === `${link}` ? 'border-b-2 border-bright' : 'border-none' }
                     >
                             {link}
                     </a>

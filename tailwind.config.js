@@ -15,6 +15,11 @@ module.exports = {
         'browserPattern': "url('/src/components/Projects/assets/browserBrush.png')",
         'muskyTweets-pattern': "url('/src/components/Projects/assets/newNewsStock.jpg')",
         'profile-MacOS': "url('/src/components/About/assets/about-mac-os9ui.jpg')",
+        'budget-tracker': "url('/src/components/Projects/assets/budgetTracker.jpg')",
+        'company-cms': "url('/src/components/Projects/assets/companyCms.jpg')",
+        'ecommerce': "url('/src/components/Projects/assets/eCommerce.jpg')",
+        'spotify-api': "url('/src/components/Projects/assets/spotifyApi.jpg')",
+        'fitness-tracker': "url('/src/components/Projects/assets/fitness-tracker.jpg')",
         // 'password-Pattern': "url('/public/passWordGenerator.jpg')",
         // 'todo-pattern': "url('/public/localStorageTodoList.jpg')",
       }

@@ -1,7 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from '../src/components/Header';
-import Prenav from './components/Prenav';
 import Main from './components/Main';
 function App() {
   return (

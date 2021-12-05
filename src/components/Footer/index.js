@@ -35,8 +35,8 @@ export default function Footer() {
     const [hasHover, setHover] = useState(false);
     
     return (
-        <section className='container py-10 pb-10 pr-2 mx-auto'>
-            <h2 className='font-display text-left text-6xl md:text-8xl md:mx-auto ml-8 pb-2 md:pb-4'>Contact</h2>
+        <section className='w-full py-10 pb-10 pr-2 mx-auto border-t-2 border-2 border-black'>
+            <h2 className='font-display text-center text-3xl md:text-2xl md:mx-auto ml-8 pb-2 md:pb-4'>Let's Connect</h2>
             
                 <ul className='font-display text-left leading-3 pb-4 md:text-xl md:text-center md:leading-9'>
                 {/* <span style={shape ? styles.hShape : styles.reggaeShape} /> */}

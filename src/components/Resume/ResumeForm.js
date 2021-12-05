@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { send } from 'emailjs-com';
-import macPrint from '../assets/mac-print.png'
+import macPrint from './assets/mac-print.png'
 import { validateEmail } from './helpers/auth';
 
 export default function ResumeForm() {
@@ -20,7 +20,7 @@ export default function ResumeForm() {
     
     const styles = {
         box: {
-            // boxShadow: '4px 4px 0 rgba(243, 110, 240)', 
+            boxShadow: '4px 4px 0 rgba(243, 110, 240)', 
         
             border: '2px solid rgba(243, 110, 240)', 
             height: '40px',
