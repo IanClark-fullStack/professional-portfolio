@@ -3,6 +3,8 @@ import { send } from 'emailjs-com';
 import macPrint from '../assets/mac-print.png'
 import { validateEmail } from './helpers/auth';
 
+
+
 export default function ConctactMeForm() {
     const [hasFocus, setFocus] = useState(false);
     const [hasFocus2, setFocus2] = useState(false);
@@ -59,10 +61,10 @@ export default function ConctactMeForm() {
         };
         // In every other case, send the email. 
         send(
-            'service_d0rdrpw',
-            'template_la8ze19',
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID2,
             toSend, 
-            'user_f68WX13eeMq2KKSwJdgPj'
+            process.env.USER_ID, 
         ) .then((res) => {
             console.log('SENT', res.status, res.text);
         }) .catch((err) => {

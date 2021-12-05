@@ -62,10 +62,10 @@ export default function ResumeForm() {
         };
         // In every other case, send the email. 
         send(
-            'service_d0rdrpw',
-            'template_nvhlb7n',
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID1,
             toSend, 
-            'user_f68WX13eeMq2KKSwJdgPj'
+            process.env.USER_ID
         ) .then((res) => {
             console.log('SENT', res.status, res.text);
         }) .catch((err) => {
