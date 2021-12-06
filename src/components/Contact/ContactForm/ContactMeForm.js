@@ -61,10 +61,10 @@ export default function ConctactMeForm() {
         };
         // In every other case, send the email. 
         send(
-            process.env.SERVICE_ID,
-            process.env.TEMPLATE_ID2,
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID2,
             toSend, 
-            process.env.USER_ID, 
+            process.env.REACT_APP_USER_ID, 
         ) .then((res) => {
             console.log('SENT', res.status, res.text);
         }) .catch((err) => {

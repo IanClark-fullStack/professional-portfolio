@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ListLink from './ListLink';
 
 export default function Footer() {
     const externalLinks = [{
@@ -13,25 +14,7 @@ export default function Footer() {
         name: 'are.na',
         url: 'https://www.are.na/ian-clark-h9y5gqm3qei'
     }];
-    const styles = {
-        box: {
-            // boxShadow: '4px 4px 0 rgba(243, 110, 240)', 
-        
-            border: '2px solid rgba(243, 110, 240)', 
-            height: '40px',
-            margin: '16px 38px',
-            fontSize: '22px',
-            overflow: 'hidden'
-        }, 
-        boxFocus: {
-            boxShadow: '4px 4px 0 rgba(41, 26, 235)', 
-            border: '2px solid rgba(41, 26, 235)', 
-            height: '40px',
-            margin: '16px 38px',
-            fontSize: '22px',
-            overflow: 'hidden'
-        }
-    }
+    
     const [hasHover, setHover] = useState(false);
     
     return (
@@ -40,18 +23,9 @@ export default function Footer() {
             
                 <ul className='font-display text-left leading-3 pb-4 md:text-xl md:text-center md:leading-9'>
                 {/* <span style={shape ? styles.hShape : styles.reggaeShape} /> */}
-                {externalLinks.map((el) => 
-                    <li key={el.url} style={hasHover ? styles.boxFocus : styles.box }className='mx-4 pb-2 inline-block md:my-4'>  
-                        <a href={el.url} 
-                            onMouseEnter={() => setHover(true)}
-                            onMouseLeave={() => setHover(false)}
-                            className='pb-2 border-b-4 border-black hover:pb-4 hover:text-bright hover:border-bright' 
-                            target='_blank'
-                            
-                        >
-                            {el.name}
-                        </a>
-                    </li>
+                {externalLinks.map((el, index) => 
+                    <ListLink key={index} url={el.url} name={el.name} />
+                
             
                 )}
             
