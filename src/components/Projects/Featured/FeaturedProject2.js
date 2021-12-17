@@ -16,7 +16,10 @@ export default function FeaturedProject2({ projectsProp }) {
             className={projectHover ? 'w-3/5 max-w-xs bg-bright border-2 border-blue ml-5' 
             : 'w-3/5 max-w-xs bg-blue border-2 border-bright ml-5'}>
                 <article className={projectHover ? replaceImageBackground : imageBackground}>
-                    
+
+                
+
+
                     {projectHover ?(
                         <div id='info1' className='font-display mt-4'>
                             <h4 id="project-title" className='text-white text-md md:text-3xl text-center'>    

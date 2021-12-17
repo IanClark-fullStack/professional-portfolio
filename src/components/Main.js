@@ -1,3 +1,4 @@
+import PreNav from './Prenav';
 import Nav from './Nav';
 import About from './About';
 import Header from './Header';
@@ -17,16 +18,18 @@ export default function() {
         }
     }
     return (
-        <main className='mx-none md:mx-4 lg:mx-52'>
+        <main className='mx-4 md:mx-14 border-2 border-black'>
+            <PreNav />
+
             <Nav pageSelect={pageSelect} changeView={changeView} /> 
             {defaultView()}
                
                 
 
-                {pageSelect === 'about' && <About />}
-                {pageSelect === 'projects' && <Projects />}
-                {pageSelect === 'contact' && <Contact />}
-                {pageSelect === 'resume' && <Resume />}
+                {pageSelect === 'About' && <About />}
+                {pageSelect === 'Projects' && <Projects />}
+                {pageSelect === 'Contact' && <Contact />}
+                {pageSelect === 'Resume' && <Resume />}
             
             <Footer /> 
         </main>

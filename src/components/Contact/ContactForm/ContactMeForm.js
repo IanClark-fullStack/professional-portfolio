@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { send } from 'emailjs-com';
+import Mail from '../../../images/Mail.png';
 import macPrint from '../assets/mac-print.png'
 import { validateEmail } from './helpers/auth';
 
@@ -21,18 +22,17 @@ export default function ConctactMeForm() {
     
     const styles = {
         box: {        
-            border: '2px solid rgba(243, 110, 240)', 
-            height: '40px',
-            margin: '16px 38px',
-            fontSize: '22px',
+            boxShadow: '4px 4px 0 rgba(41, 26, 235)', 
+            border: '2px solid rgba(41, 26, 235)', 
+            // height: '40px',
+            // margin: '16px 0px',
             overflow: 'hidden'
         }, 
         boxFocus: {
-            boxShadow: '4px 4px 0 rgba(41, 26, 235)', 
-            border: '2px solid rgba(41, 26, 235)', 
-            height: '40px',
-            margin: '16px 38px',
-            fontSize: '22px',
+            boxShadow: '4px 4px 0 rgba(243, 110, 240)',
+            border: '2px solid rgba(243, 110, 240)', 
+            // height: '40px',
+            // margin: '16px 0px',
             overflow: 'hidden'
         }
     }
@@ -74,13 +74,13 @@ export default function ConctactMeForm() {
 
     return (
         <>
-        <form id='myForm' className='w-8/12' onSubmit={handleFormSubmit}> 
-            <h5>Drop me a line</h5>
-            <div className='w-1/3' style={hasFocus ? styles.boxFocus : styles.box}> 
+        <form id='myForm' className='flex flex-col items-center' onSubmit={handleFormSubmit}> 
+           
+            <div className='h-12 mt-5' style={hasFocus ? styles.boxFocus : styles.box}> 
                 <input 
                     onFocus={() => setFocus(true)}
                     onBlur={() => setFocus(false)}
-                    className='focus:outline-none pl-2'
+                    className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
                     type='text' 
                     name='contact_email'
                     placeholder='Your email'
@@ -89,11 +89,11 @@ export default function ConctactMeForm() {
                     onChange={handleInputChange}
                 />
             </div>
-            <div className='w-1/3' style={hasFocus2 ? styles.boxFocus : styles.box}>   
+            <div className='h-12 mt-10' style={hasFocus2 ? styles.boxFocus : styles.box}>   
                 <input 
                     onFocus={() => setFocus2(true)}
                     onBlur={() => setFocus2(false)}
-                    className='focus:outline-none pl-2'
+                    className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
                     type='text' 
                     name='contact_name'
                     placeholder='Your name'
@@ -102,11 +102,11 @@ export default function ConctactMeForm() {
                     onChange={handleInputChange}
                 />
             </div>
-            <div className='w-2/3' style={hasFocus3 ? styles.boxFocus : styles.box}>
+            <div className='h-15 mt-10' style={hasFocus3 ? styles.boxFocus : styles.box}>
                 <textarea 
                     onFocus={() => setFocus3(true)}
                     onBlur={() => setFocus3(false)}
-                    className='focus:outline-none pl-2'
+                    className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
                     type='text' 
                     name='message'
                     id='message' 
@@ -115,17 +115,14 @@ export default function ConctactMeForm() {
                     onChange={handleInputChange}
                 />
             </div>
-            <div className='flex flex-row-reverse'>
-                {hasHover ?(
-                    <img src={macPrint} />
-                ) : <></>
-                }
+            <div className='flex flex-row-reverse w-full text-right'>
+               
                 <button 
                     onMouseEnter={() => setHover(true)} 
                     onMouseLeave={() => setHover(false)}
-                    className='font-display text-sm' 
+                    className='font-display py-2 px-9 bg-gradient-to-r from-pink-300 border-bright border text-white hover:text-bright text-md mt-12' 
                     type='submit' 
-                    value='send'>Send yourself a copy
+                    value='send'><img src={Mail} />SEND
                 </button>
             </div>
         </form>

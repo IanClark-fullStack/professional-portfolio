@@ -25,8 +25,8 @@ export default function Contact() {
         
 
     return (
-        <section className='py-10 mb-22 pr-2 mx-auto md:w-11/12 lg:w-8/12'>
-            <h2 className='font-display text-center text-6xl md:text-8xl md:mx-auto ml-8 pb-2 md:pb-4'>Contact</h2>
+        <section className='py-10 mb-22 pr-2 mx-auto md:w-10/12 lg:w-7/12'>
+            <h2 className='font-display text-center text-6xl md:text-7xl md:mx-auto pb-2 md:py-8'>Contact</h2>
             
         
 
