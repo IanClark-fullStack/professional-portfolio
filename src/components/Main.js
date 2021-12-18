@@ -14,7 +14,7 @@ export default function() {
     const changeView = (view) => setPageSelect(view);
     const defaultView = () => {
         if (pageSelect === 'home') {
-            return <> <Header /> <About /> </>
+            return <> <Header /> <Projects /> <About /> <Resume /> </>
         }
     }
     return (
@@ -29,7 +29,7 @@ export default function() {
                 {pageSelect === 'About' && <About />}
                 {pageSelect === 'Projects' && <Projects />}
                 {pageSelect === 'Contact' && <Contact />}
-                {pageSelect === 'Resume' && <Resume />}
+                {pageSelect === 'resume' && <Resume />}
             
             <Footer /> 
         </main>
