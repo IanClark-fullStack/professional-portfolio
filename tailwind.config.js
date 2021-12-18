@@ -1,7 +1,7 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
-    // purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    purge: [],
+    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    // purge: [],
     darkMode: false, // or 'media' or 'class'
     theme: {
       fontFamily: {

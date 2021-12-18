@@ -2,7 +2,7 @@ import ResumeForm from './ResumeForm';
 import Mail from '../../images/Mail.png';
 export default function Resume() {
     return (
-        <section className='py-10 mb-22 pr-2 mx-auto md:w-10/12 lg:w-7/12'>
+        <section className='w-10/12 md:w-5/12 items-center my-4 md:my-0 mx-auto md:mx-0'>
             <h2 className='font-display text-center text-6xl md:text-7xl md:mx-auto pb-2 md:py-8'>Resume</h2>
             <div id='formContainer' className='mt-4 bg-blue border-4 border-blue mx-none'>
                 <article className='mx-auto bg-white border-4 border-blue transform -translate-x-2 -translate-y-3 md:-translate-x-4 md:-translate-y-6'>

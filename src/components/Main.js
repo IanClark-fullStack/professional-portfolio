@@ -18,7 +18,7 @@ export default function() {
         }
     }
     return (
-        <main className='mx-4 md:mx-14 border-2 border-black'>
+        <main className='mx-4 md:mx-14 border-l-2 border-r-2 border-black'>
             <PreNav />
 
             <Nav pageSelect={pageSelect} changeView={changeView} /> 

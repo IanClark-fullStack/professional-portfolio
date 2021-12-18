@@ -70,7 +70,7 @@ export default function ResumeForm() {
     return (
         <>
         <form id='myForm' className='flex flex-col items-center' onSubmit={handleFormSubmit}> 
-            <img src={Mail} />
+            <h2 className='font-display text-center md:mx-auto pb-2 md:pb-4'>Grab a Copy Below</h2>
             
             <div className='h-12 mt-5' style={hasFocus ? styles.boxFocus : styles.box}> 
                 <input 

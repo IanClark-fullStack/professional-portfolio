@@ -13,8 +13,12 @@ export default function FeaturedProjects({ projectsProp }) {
     return (     
     <>
         {projectsProp.map((project, index) =>
-            <div className='md:flex md:flex-row justify-evenly md:items-center pt-8 pb-16'>
-                <div className='w-10/12 md:w-5/12 items-center mx-auto md:mx-0'>        
+            <div className='md:flex md:flex-row justify-evenly md:items-center pt-2 md:pt-8 md:pb-16'>
+                <div className='w-11/12 md:w-5/12 items-center mx-auto md:mx-0'>
+                    <p className='font-display my-4 md:my-2 px-4 mx-1 md:mx-0 bg-blue text-white md:text-lg block md:hidden'>{project.summary}</p>
+                </div>
+                <div className='w-10/12 md:w-5/12 items-center my-4 md:my-0 mx-auto md:mx-0'>
+                            
                     <div
                         onMouseEnter={() => setProjectHover(true)} 
                         onMouseLeave={() => setProjectHover(false)}
@@ -42,18 +46,18 @@ export default function FeaturedProjects({ projectsProp }) {
                     </div>
                 </div>
 
-                <div id='project-info' className='md:flex md:flex-col w-11/12 md:w-5/12 text-left md:my-2 mx-auto md:mx-0'>
-                    <p className='font-display my-6 md:my-2 p-2 bg-blue text-white md:text-lg'>{project.summary}</p>
+                <div id='project-info' className='md:flex md:flex-col w-10/12 md:w-5/12 text-left md:my-2 mx-auto md:mx-0'>
+                    <p className='font-display my-6 md:my-2 p-2 mx-1 md:mx-0 bg-blue text-white md:text-lg md:block hidden'>{project.summary}</p>
 
                     {project.desc.map((line, index) => 
-                        <p key={index} className='font-display mx-6 md:mx-0 py-1 md:p-2'>
+                        <p key={index} className='font-display mx-2 md:mx-0 py-1 md:p-2'>
                             {line}
                         </p> 
                     )}
 
-                    <ul className='mt-3 mx-3 md:mt-6'>
+                    <ul className='mt-2 md:mx-3 md:mt-6'>
                         {project.tech.map((techEl, index) => 
-                            <li key={index} className='font-body text-left px-6 mt-2 ml-2 md:ml-4 text-sm inline-block bg-blue text-white'>
+                            <li key={index} className='font-body text-left px-6 mt-1 md:mt-2 ml-2 md:ml-4 text-xs md:text-sm inline-block bg-blue text-white'>
                                 {`${techEl}`}
                             </li>
                         )}

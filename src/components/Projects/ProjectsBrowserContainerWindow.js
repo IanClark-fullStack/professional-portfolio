@@ -246,7 +246,7 @@ export default function ProjectsBrowserContainerWindow() {
 
     return (
         
-        <div id='scroll-inside' style={styles.scrollable} className='px-4 h-60 md:h-96 lg:h-128 overflow-auto'>
+        <div id='scroll-inside' style={styles.scrollable} className='px-1 md:px-4 h-72 md:h-96 lg:h-128 overflow-auto'>
                 <FeaturedProjects projectsProp={projects} />
             {/* <div className='flex justify-evenly items-center py-8'>
                 <FeaturedProject1 projectsProp={projects} />
