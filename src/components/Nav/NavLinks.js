@@ -8,13 +8,13 @@ export default function NavLinks({ link, pageSelect, changeView }) {
 
 
     return (
-        <li className={hoverStyle ? onHover : 'border-none mx-1 md:mx-5 hover:cursor-pointer' }> 
+        <li className={hoverStyle ? onHover : 'border-none mx-1 md:mx-5 hover:cursor-fancy' }> 
                     
                     <a
                         onClick={() => changeView(`${link}`)} 
                         onMouseEnter={() => setHoverStyle(true)}
                         onMouseLeave={() => setHoverStyle(false)}
-                        className={pageSelect === link ? 'border-b-2 border-bright' : null }
+                        className={pageSelect === link ? 'border-b-2 border-bright' : 'cursor-fancy' }
 
                     >
                             {link}

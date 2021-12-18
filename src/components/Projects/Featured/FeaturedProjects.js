@@ -14,7 +14,7 @@ export default function FeaturedProjects({ projectsProp }) {
     <>
         {projectsProp.map((project, index) =>
             <div className='md:flex md:flex-row justify-evenly md:items-center pt-2 md:pt-8 md:pb-16'>
-                <div className='w-11/12 md:w-5/12 items-center mx-auto md:mx-0'>
+                <div className='w-11/12 md:w-5/12 md:hidden items-center mx-auto md:mx-0'>
                     <p className='font-display my-4 md:my-2 px-4 mx-1 md:mx-0 bg-blue text-white md:text-lg block md:hidden'>{project.summary}</p>
                 </div>
                 <div className='w-10/12 md:w-5/12 items-center my-4 md:my-0 mx-auto md:mx-0'>

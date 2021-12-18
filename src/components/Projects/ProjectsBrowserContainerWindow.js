@@ -45,13 +45,13 @@ export default function ProjectsBrowserContainerWindow() {
         },
         {
             id: 8,
-            name: 'DnD Stat Tracker', 
+            name: 'DnD Character Tracker', 
             repo: 'https://github.com/IanClark-fullStack/dnd-stat-tracker',
             deployed: 'https://floating-oasis-62391.herokuapp.com/dashboard',
             offHover: dndImage,
-            desc: ['MERN-Stack application and book search engine.','Allows users to search and browse books using Google Books API, as well as save and manage books on their individual profile.'],
-            summary: 'RESTful API to GraphQL API Conversion',
-            tech: ['GraphQL', 'MongoDB', 'React', 'Node', 'Express', 'JSON Web Token', 'bCrypt', 'Apollo Server'],
+            desc: ['Fullstack application, collaboratively drafted and developed.', 'Keep track of complex character data, stats and dice rolls in one place.'],
+            summary: 'Intuitive DnD Application',
+            tech: ['GraphQL', 'MongoDB', 'React', 'Node', 'Express', 'JSON Web Token', 'bCrypt', 'Apollo Server', 'Material UI'],
             
         },
         {
@@ -105,40 +105,34 @@ export default function ProjectsBrowserContainerWindow() {
             tech: ['Sequelize', 'Express.js', 'Node', 'JavaScript', 'MySql', 'OOP', 'Insomnia']
             
         },
-        {
-            id: 2,
-            name: 'News-Stock API', 
-            repo: 'https://github.com/IanClark-fullStack/muskytweets',
-            deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
-            offHover: muskyTweetsImage,
-            description: 'Collaborative fullstack application using Spotify API',
-            desc: ['Application drafted and developed for the purpose on the creating playlists', 'Giving users a space to showcase their playlists and explore content from other users outside of the native spotify application.'],
-            summary: 'Spotify API Application',
-            tech: ['Sequelize', 'MySQL2', 'Spotify', 'Node', 'Express', 'Handlebars', 'Heroku'], 
-        },
-        {
-            id: 6,
-            name: 'Local Coast', 
-            repo: 'https://github.com/stewsabatino/local-coast',
-            deployed: 'https://local-coast.herokuapp.com/',
-            offHover: spotifyImage,
-            description: 'Collaborative fullstack application using Spotify API',
-            desc: ['Application drafted and developed for the purpose on the creating playlists', 'Giving users a space to showcase their playlists and explore content from other users outside of the native spotify application.'],
-            summary: 'Spotify API Application',
-            tech: ['Sequelize', 'MySQL2', 'Spotify', 'Node', 'Express', 'Handlebars', 'Heroku'], 
-        },
-        {
-            id: 6,
-            name: 'Local Coast', 
-            repo: 'https://github.com/stewsabatino/local-coast',
-            deployed: 'https://local-coast.herokuapp.com/',
-            offHover: spotifyImage,
-            description: 'Collaborative fullstack application using Spotify API',
-            desc: ['Application drafted and developed for the purpose on the creating playlists', 'Giving users a space to showcase their playlists and explore content from other users outside of the native spotify application.'],
-            summary: 'Spotify API Application',
-            tech: ['Sequelize', 'MySQL2', 'Spotify', 'Node', 'Express', 'Handlebars', 'Heroku'], 
-        },
+        // {
+        //     id: 6,
+        //     name: 'Local Coast', 
+        //     repo: 'https://github.com/stewsabatino/local-coast',
+        //     deployed: 'https://local-coast.herokuapp.com/',
+        //     offHover: spotifyImage,
+        //     description: 'Collaborative fullstack application using Spotify API',
+        //     desc: ['Application drafted and developed for the purpose on the creating playlists', 'Giving users a space to showcase their playlists and explore content from other users outside of the native spotify application.'],
+        //     summary: 'Spotify API Application',
+        //     tech: ['Sequelize', 'MySQL2', 'Spotify', 'Node', 'Express', 'Handlebars', 'Heroku'], 
+        // },
+        // {
+        //     id: 2,
+        //     name: 'News-Stock API', 
+        //     repo: 'https://github.com/IanClark-fullStack/muskytweets',
+        //     deployed: 'https://ianclark-fullstack.github.io/muskytweets/',
+        //     offHover: muskyTweetsImage,
+        //     description: 'Collaborative fullstack application using Spotify API',
+        //     desc: ['Application drafted and developed for the purpose on the creating playlists', 'Giving users a space to showcase their playlists and explore content from other users outside of the native spotify application.'],
+        //     summary: 'Spotify API Application',
+        //     tech: ['Sequelize', 'MySQL2', 'Spotify', 'Node', 'Express', 'Handlebars', 'Heroku'], 
+        // },
     ];
+
+
+
+
+
     // const projects = {
     //     project7: {
     //         id: 7,
@@ -246,7 +240,7 @@ export default function ProjectsBrowserContainerWindow() {
 
     return (
         
-        <div id='scroll-inside' style={styles.scrollable} className='px-1 md:px-4 h-72 md:h-96 lg:h-128 overflow-auto'>
+        <div id='scroll-inside' style={styles.scrollable} className='px-1 mb-1 md:px-4 h-72 md:h-96 lg:h-128 overflow-auto'>
                 <FeaturedProjects projectsProp={projects} />
             {/* <div className='flex justify-evenly items-center py-8'>
                 <FeaturedProject1 projectsProp={projects} />

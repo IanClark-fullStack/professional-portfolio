@@ -23,14 +23,10 @@ export default function() {
 
             <Nav pageSelect={pageSelect} changeView={changeView} /> 
             {defaultView()}
-               
-                
-
                 {pageSelect === 'About' && <About />}
                 {pageSelect === 'Projects' && <Projects />}
                 {pageSelect === 'Contact' && <Contact />}
-                {pageSelect === 'resume' && <Resume />}
-            
+                {pageSelect === 'Resume' && <Resume />}
             <Footer /> 
         </main>
     )
