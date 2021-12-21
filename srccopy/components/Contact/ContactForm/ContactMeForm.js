@@ -1,33 +1,38 @@
 import { useState } from 'react';
 import { send } from 'emailjs-com';
-import Mail from '../../images/Mail.png';
-import macPrint from './assets/mac-print.png'
+import Mail from '../../../images/Mail.png';
+import macPrint from '../assets/mac-print.png'
 import { validateEmail } from './helpers/auth';
 
-export default function ResumeForm() {
+
+
+export default function ConctactMeForm() {
     const [hasFocus, setFocus] = useState(false);
     const [hasFocus2, setFocus2] = useState(false);
+    const [hasFocus3, setFocus3] = useState(false);
     const [hasHover, setHover] = useState(false);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [toSend, setToSend] = useState({
-        user_email: '',
-        user_name: '',
+        contact_email: '',
+        contact_name: '',
         message: '',
     });
-
-    const boxOff = 'h-28 md:h-44 bg-bright border-2 border-blue transform -translate-x-2 -translate-y-2 md:-translate-x-2 md:-translate-y-3 hover:bg-blue hover:border-bright';
     
     const styles = {
-        box: {
+        box: {        
             boxShadow: '4px 4px 0 rgba(41, 26, 235)', 
-            border: '2px solid rgba(41, 26, 235)',  
+            border: '2px solid rgba(41, 26, 235)', 
+            // height: '40px',
+            // margin: '16px 0px',
             overflow: 'hidden'
         }, 
         boxFocus: {
-            boxShadow: '4px 4px 0 rgba(243, 110, 240)', 
+            boxShadow: '4px 4px 0 rgba(243, 110, 240)',
             border: '2px solid rgba(243, 110, 240)', 
+            // height: '40px',
+            // margin: '16px 0px',
             overflow: 'hidden'
         }
     }
@@ -36,7 +41,7 @@ export default function ResumeForm() {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
-        if (inputType === 'user_email') {
+        if (inputType === 'contact_email') {
             // Change state of email 
             setEmail(inputValue);
         } else {
@@ -57,9 +62,9 @@ export default function ResumeForm() {
         // In every other case, send the email. 
         send(
             process.env.REACT_APP_SERVICE_ID,
-            process.env.REACT_APP_TEMPLATE_ID1,
+            process.env.REACT_APP_TEMPLATE_ID2,
             toSend, 
-            process.env.REACT_APP_USER_ID
+            process.env.REACT_APP_USER_ID, 
         ) .then((res) => {
             console.log('SENT', res.status, res.text);
         }) .catch((err) => {
@@ -70,18 +75,17 @@ export default function ResumeForm() {
     return (
         <>
         <form id='myForm' className='flex flex-col items-center' onSubmit={handleFormSubmit}> 
-            <h2 className='font-display text-center text-xs md:text-md md:mx-auto pb-2 md:pb-4'>Grab a Copy Below</h2>
-            
+           
             <div className='h-12 mt-5' style={hasFocus ? styles.boxFocus : styles.box}> 
                 <input 
                     onFocus={() => setFocus(true)}
                     onBlur={() => setFocus(false)}
                     className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
                     type='text' 
-                    name='user_email'
+                    name='contact_email'
                     placeholder='Your email'
-                    id='user_email'
-                    value={toSend.user_email}
+                    id='contact_email'
+                    value={toSend.contact_email}
                     onChange={handleInputChange}
                 />
             </div>
@@ -91,18 +95,32 @@ export default function ResumeForm() {
                     onBlur={() => setFocus2(false)}
                     className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
                     type='text' 
-                    name='user_name'
+                    name='contact_name'
                     placeholder='Your name'
-                    id='user_name' 
-                    value={toSend.user_name}
+                    id='contact_name' 
+                    value={toSend.contact_name}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <div className='h-15 mt-10' style={hasFocus3 ? styles.boxFocus : styles.box}>
+                <textarea 
+                    onFocus={() => setFocus3(true)}
+                    onBlur={() => setFocus3(false)}
+                    className='focus:outline-none w-full font-display text-xl mx-4 my-2 placeholder:text-gray-300 text-blue'
+                    type='text' 
+                    name='message'
+                    id='message' 
+                    placeholder='message'
+                    value={toSend.message}
                     onChange={handleInputChange}
                 />
             </div>
             <div className='flex flex-row-reverse w-full text-right'>
+               
                 <button 
                     onMouseEnter={() => setHover(true)} 
                     onMouseLeave={() => setHover(false)}
-                    className='font-display py-2 px-9 bg-gradient-to-r from-pink-300 to-pink-50 border-bright border text-pink-500 hover:text-bright text-md mt-12' 
+                    className='font-display py-2 px-9 bg-gradient-to-r from-pink-300 border-bright border text-white hover:text-bright text-md mt-12' 
                     type='submit' 
                     value='send'><img src={Mail} />SEND
                 </button>

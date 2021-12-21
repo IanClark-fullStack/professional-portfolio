@@ -1,8 +1,8 @@
 export default function Info() {
     return (
         <>
-            <div className='flex flex-col md:flex md:flex-row justify-center items-center py-3 my-6 md:mx-32 lg:mx-60'>
-                <div className='bg-blue w-1/2 md:w-3/12 h-24 md:h-36 border-2 border-bright md:mr-2'>
+            <div className='flex flex-col md:flex items-center py-3 my-6 md:mx-32 lg:mx-60'>
+                <div className='bg-blue w-1/2 md:w-3/12 lg:w-2/12 border-2 border-bright md:mr-2'>
                     <article className='mx-auto h-24 md:h-36 bg-profile-MacOS bg-cover bg-center bg-no-repeat border-2 border-blue transform -translate-x-1 -translate-y-2 md:-translate-x-2 md:-translate-y-3'>
                         <div className='h-3 md:h-4 bg-blue bg-browser-pattern bg-cover bg-center items-center p2 text-xs text-white'><p className='text-xs md:text-md text-left ml-1'>X _</p></div>
                     </article>

@@ -14,11 +14,11 @@ export default function ListLink(props) {
         }
     }
     return (
-        <li style={hasHover ? styles.boxFocus : styles.box }className='pb-2 h-6 mx-3 md:mx-6 inline-block h-6 border-b-2 border-black md:h-8 text-sm md:my-2 md:my-2 md:text-lg md:mx-18'>  
+        <li style={hasHover ? styles.boxFocus : styles.box }className='pb-2 h-6 mx-3 md:mx-6 inline-block h-6 border-b-2 border-black md:h-12 text-sm md:my-4 md:text-lg md:mx-18'>  
             <a href={props.url}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className='pb-2 px-1 hover:pb-2 hover:text-bright hover:border-bright' 
+                className='pb-2 px-1 border-b-4 border-black hover:pb-4 hover:text-bright hover:border-bright' 
                 target='_blank'
                 
             >
