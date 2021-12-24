@@ -17,11 +17,7 @@ export default function Info() {
                     <p className='mt-2 md:mt-8'>I’m currently enjoying working with React, Express, Node, NoSQL, GraphQL and RESTful API architectures. For more information, grab a copy of my resume below.</p>
                     
                 </div>
-                    
-{/*                     
-                <div className='font-display justify-center leading-loose w-8/12 p-4 text-black text-left text-md md:hidden flex flex-row'>
-                    Hi, my name is Ian. In high school, I was really into the idea of being a graffiti artist. I painted in my room and did wheat-pastes about town. A few years later, I realized I was really just into design and creative problem solving. These days, you can find me at Northwestern Universities Full Stack Web Development Bootcamp, focused on learning and improving programming languages.
-                </div> */}
+                
             </div>
         </>
     )
