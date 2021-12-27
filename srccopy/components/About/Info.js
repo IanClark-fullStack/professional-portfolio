@@ -14,7 +14,7 @@ export default function Info() {
                     <p className='mt-4 md:mt-10'>Currently, I am a full stack developer and recent graduate from Northwestern University, looking to expand my professional experience as a Full Stack Developer within a fast-paced and quality driven company culture.
                     </p>
 
-                    <p className='mt-2 md:mt-8'>I’m currently enjoying working with React, Express, Node, NoSQL, GraphQL and RESTful API architectures. For more information, grab a copy of my resume below.</p>
+                    <p className='mt-4 md:mt-10'>I’m currently enjoying working with React, Express, Node, NoSQL, GraphQL and RESTful API architectures. For more information, grab a copy of my resume below.</p>
                     
                 </div>
                 
